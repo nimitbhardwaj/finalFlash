@@ -3,8 +3,10 @@ import socket
 import pyaudio
 import time
 import threading
+import sys
 
-HOST=raw_input("Enter the ip of server")
+# HOST=raw_input("Enter the ip of server")
+HOST = sys.argv[1]
 PORT=6001
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

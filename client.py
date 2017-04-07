@@ -20,9 +20,11 @@ class Client:
 
 if __name__ == "__main__":
     print "Enter the IP address of you want to connect"
-    ip_addr = raw_input()
+    # ip_addr = raw_input()
+    # ip_addr = ""
     if len(sys.argv) == 2:
         ip_addr = sys.argv[1]
+        print ip_addr
 
     print "Connecting to " + ip_addr + "...."
     client = Client(ip_addr)

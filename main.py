@@ -19,7 +19,8 @@ if status == 0:
 else:
     print 'You are the client'
     print 'You have to enter the IP address'
-    audi = RunInThread("python tryclient.py")
-    vid = RunInThread("python client.py")
+    ip = raw_input();
+    audi = RunInThread("python tryclient.py " + ip)
+    vid = RunInThread("python client.py " + ip)
     audi.start()
     vid.start()
