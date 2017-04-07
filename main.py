@@ -12,14 +12,14 @@ IP = ""
 
 if status == 0:
     print 'You are the server'
-    audi = RunInThread("python ./pcAudio/tryserver.py")
-    vid = RunInThread("python ./videochat/server.py")
+    audi = RunInThread("python tryserver.py")
+    vid = RunInThread("python server.py")
     audi.start()
     vid.start()
 else:
     print 'You are the client'
     print 'You have to enter the IP address'
-    audi = RunInThread("python ./pcAudio/tryclient.py")
-    vid = RunInThread("python ./videochat/client.py")
+    audi = RunInThread("python tryclient.py")
+    vid = RunInThread("python client.py")
     audi.start()
     vid.start()
